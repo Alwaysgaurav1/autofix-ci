@@ -1,0 +1,17 @@
+FAIL test_validator.js
+  ● Email Validator › should reject email missing domain
+
+    AssertionError [ERR_ASSERTION]: Missing domain should fail
+      Expected: false
+      Received: true
+
+      at Object.<anonymous> (test_validator.js:6:10)
+      at Module._compile (node:internal/modules/cjs/loader:1376:14)
+
+FAIL src/validator.test.ts
+  ✕ should reject invalid email without domain (12 ms)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 1 passed, 2 total
+Snapshots:   0 total
+Time:        1.142 s

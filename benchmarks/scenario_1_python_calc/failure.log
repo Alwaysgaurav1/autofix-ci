@@ -1,0 +1,31 @@
+============================= test session starts ==============================
+platform darwin -- Python 3.12.13, pytest-9.1.1, pluggy-1.7.0
+rootdir: /Users/gauravkumarpandey/.gemini/antigravity/scratch/autofix-ci
+configfile: pyproject.toml
+plugins: asyncio-1.4.0, anyio-4.15.1
+asyncio: mode=Mode.STRICT, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function
+collecting ... collected 3 items                                                              
+
+test_calculator.py FF.                                                   [100%]
+
+=================================== FAILURES ===================================
+__________________________ test_add_positive_numbers ___________________________
+
+    def test_add_positive_numbers():
+>       assert add(2, 3) == 5
+E       assert 6 == 5
+E        +  where 6 = add(2, 3)
+
+test_calculator.py:5: AssertionError
+________________________________ test_add_zero _________________________________
+
+    def test_add_zero():
+>       assert add(0, 0) == 0
+E       assert 1 == 0
+E        +  where 1 = add(0, 0)
+
+test_calculator.py:9: AssertionError
+=========================== short test summary info ============================
+FAILED test_calculator.py::test_add_positive_numbers - assert 6 == 5
+FAILED test_calculator.py::test_add_zero - assert 1 == 0
+========================= 2 failed, 1 passed in 0.01s ==========================
